@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-xorv
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-xorv
+    app.kubernetes.io/part-of: e2e-nodejs
+  name: devfile-sample-xorv
+  namespace: e2e-demos-vvfe-tenant
+spec:
+  path: /
+  port:
+    targetPort: 3001
+  to:
+    kind: Service
+    name: devfile-sample-xorv
+    weight: null
+status: {}
