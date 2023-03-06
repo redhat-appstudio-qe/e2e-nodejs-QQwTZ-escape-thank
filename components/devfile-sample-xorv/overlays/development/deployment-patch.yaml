@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-xorv
+  namespace: e2e-demos-vvfe-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images-protected@sha256:8e65135f6b4d2195e7cbf4b308609eaa23078a071dd70d3cf5329a3bc4af3517
+        name: my-nodejs
+        resources: {}
+status: {}
